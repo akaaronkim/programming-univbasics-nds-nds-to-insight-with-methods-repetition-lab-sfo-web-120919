@@ -38,6 +38,17 @@ def list_of_directors(source)
 end
 
 def total_gross(source)
+  total = 0
+
+  directors = directors_totals(source)
+  list = list_of_directors(source)
+
+  list.each do |name|
+    total += directors[name]
+  end
+
+  return total 
+
   # Write this implementation
   #
   # Should use methods:
